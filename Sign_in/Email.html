@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+   <link href="style.css" rel="stylesheet" type="text/css"/> 
+<style>
+ a
+{
+text-decoration:none;
+}
+</style>
+<script>
+function check()
+{
+var pemail=/^[a-zA-Z0-9.-_]+@[a-zA-Z0-9.-_]+\.[a-zA-Z]{2,7}$/;
+var email1=document.getElementById("ch").value;
+if(email1==pemail)
+{
+document.getElementById("sp").innerHTML="Invalid email address.";
+document.getElementById("sp").style.color="red";
+}
+}
+function check1()
+{
+var pw=document.getElementById("num").value; 
+if(pw.length<=6)
+{
+document.getElementById("sp1").innerHTML="weak password";
+document.getElementById("sp1").style.color="red";
+}
+else if(pw.length>6&&pw.length<=8)
+{
+document.getElementById("sp1").innerHTML="strong password";
+document.getElementById("sp1").style.color="green";
+}
+else
+{
+document.getElementById("sp1").innerHTML=" very strong password";
+document.getElementById("sp1").style.color="blue";
+}
+}
+function store()
+{
+var eml[]={document.getElementById("ch").value};
+var pass[]={document.getElementById("num").value};
+var pk=document.getElementById("ck").value;
+if(eml[]!='\0')
+{
+window.alert("eml[]");
+}
+function save()
+{
+var a[]={document.getElementById("ch")};
+
+}
+</script>
+</head>
+<body>
+<center><font size="50px"><span style="color:blue;">G</span><span style="color:red;">o</span><span style="color:yellow;">o</span><span style="color:blue;">g</span><span style="color:lime;">l</span><span style="color:blue;">e</span></font></center>
+<center><h1>One account. All of Google</h1></center>
+<center><h6>Sign in to continue to Gmail</h6></center>
+<div id="box">
+<form>
+<table>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<tr>
+<th style="color:blue;">Enter email</th>
+<td><input type="email" id="ch" onkeypress="check()" onkeyup="check()"/></td>
+<tr>
+<th> </th>
+<td><span id="sp"></span></td>
+</tr>
+</tr>
+<tr>
+<th style="color:blue;">Password</th>
+<td><input type="password" id="num" onkeyup="check1()"/></td>
+<tr>
+<th> </th>
+<td><span id="sp1"></span></td>
+</tr>
+</tr>
+
+<tr>
+<th>   </th>
+<td><input type="submit" value="sign in" style="background-color:blue; color:white;width:172px;" onclick="store()" /></td>
+</tr>
+<tr>
+<th>    </th>
+<td><input type="checkbox" id="ck" value="stay"/>stay sign in&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="help.html">Need Help?</a></td>
+</tr>
+</table>
+</form>
+</div>
+<center><a href="register.html">Create an account.</a></center>
+<center><h4>One Google Account for everything Google.</h4></center>
+</body>
+</html>
